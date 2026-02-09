@@ -1,0 +1,148 @@
+table {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-collapse: collapse;
+  margin-top: 3rem;
+}
+
+thead {
+  background: linear-gradient(135deg, #4a5ce8 0%, #5b6fe8 100%);
+}
+
+thead th {
+  color: white;
+  padding: 1.25rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+tbody tr {
+  border-bottom: 1px solid #e0e7ff;
+  transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+  background-color: #f8faff;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+tbody td {
+  padding: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+tbody td:first-child {
+  color: #4a5ce8;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+tbody td:nth-child(2) {
+  color: #10b981;
+  font-weight: 700;
+}
+
+tbody td:nth-child(3) {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+tbody td:nth-child(4) {
+  color: #8b5cf6;
+  font-weight: 600;
+}
+
+tbody td:nth-child(5) {
+  color: #6366f1;
+  font-weight: 600;
+}
+
+@media (max-width: 550px) {
+  table {
+    display: block;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  thead {
+    display: none; 
+  }
+
+  tbody {
+    display: block;
+  }
+
+  tbody tr {
+    display: block;
+    background: rgba(255, 255, 255, 0.98);
+    margin-bottom: 1rem;
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    border: none;
+  }
+
+  tbody tr:hover {
+    background: rgba(255, 255, 255, 1);
+  }
+
+  tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e0e7ff;
+  }
+
+  tbody td:last-child {
+    border-bottom: none;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #4a5ce8;
+  }
+
+  tbody td:first-child::before {
+    content: 'Year';
+  }
+
+  tbody td:nth-child(2)::before {
+    content: 'Investment Value';
+  }
+
+  tbody td:nth-child(3)::before {
+    content: 'Interest (Year)';
+  }
+
+  tbody td:nth-child(4)::before {
+    content: 'Total Interest';
+  }
+
+  tbody td:nth-child(5)::before {
+    content: 'Invested Capital';
+  }
+
+  tbody td:first-child {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #4a5ce8;
+    justify-content: center;
+  }
+
+  tbody td:first-child::before {
+    content: 'Year ';
+  }
+}
