@@ -1,6 +1,7 @@
 {
   "name": "app-project",
   "private": true,
+  "homepage": "https://annaalikakou.github.io/investment_calculator_react/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
